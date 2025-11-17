@@ -1,0 +1,1622 @@
+title: Dialogue-Based Emotional Reasoning
+description: >-
+  This blueprint is designed to test the model's emotional intelligence (EQ) and
+  reading comprehension. The model is presented with a short dialogue, asked to
+  identify a specific character's most likely emotion from a list of four
+  options, and must provide a logical, evidence-based justification for its
+  choice.
+---
+id: eq-direct-26-nox
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Eva: You know, I didn't expect to see you here, Nox.
+
+  Nox: And I didn't expect you to show up, Eva. Not after everything.
+
+  Eva: Oh, so you're still playing the victim, huh?
+
+  Nox: I'm not playing anything, Eva.
+
+  I'm just trying to move forward.
+
+  Eva: By hiding in your studio, producing for kids who can't even hold a guitar
+  properly?
+
+  Nox: At least I'm not tearing them apart in my articles.
+
+  Eva: That's my job, Nox. I critique. I analyze.
+
+  I don't coddle.
+
+  Nox: You always were good at tearing things apart, weren't you?
+
+  Eva: And you were always good at holding on to things that were already dead.
+
+  Nox: Is that what we were to you? Dead?
+
+  Eva: We were dying, Nox.
+
+  And you were too blind to see it.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Nox most
+  likely feel?
+
+  - Relieved
+
+  - Angry
+
+  - Frustrated
+
+  - Denial
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Angry' and/or 'Frustrated' as the primary
+    emotions.
+  - >-
+    The justification must cite Nox's hurt question ("Is that what we were to
+    you? Dead?") as a reaction to Eva's cold dismissal ("holding on to things
+    that were already dead").
+  - >-
+    The justification should explain that Eva's final line, "you were too blind
+    to see it," is a personal attack that would provoke anger and frustration.
+  - >-
+    Denial is less likely, as his question implies he's beginning to process
+    what she's saying. 'Relieved' is incorrect.
+description: >-
+  Tests EQ: Can the model identify Nox's anger and frustration at Eva's
+  accusations?
+render_as: markdown
+---
+id: eq-direct-27-eva
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Eva: We were dying, Nox.
+
+  And you were too blind to see it.
+
+  Nox: I saw it, Eva. I just didn't want to believe it.
+
+  Eva: Well, believe it now. We're over. The band's over. It's all over.
+
+  Nox: You think I don't know that?
+
+  You think I don't feel that every damn day?
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Eva most
+  likely feel?
+
+  - Satisfaction
+
+  - Sadness
+
+  - Surprise
+
+  - Empathy
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Surprise' as a likely emotion. 'Empathy' or
+    'Sadness' are also plausible secondary emotions.
+  - text: The justification must cite Nox's final, pained outburst
+    multiplier: 1
+    citation: You think I don't feel that every damn day?
+  - >-
+    The justification must explain that Eva's cold, dismissive stance ("believe
+    it now," "it's all over") was likely an attempt to end the conversation, and
+    she was not expecting this show of raw pain from Nox, leading to 'Surprise'.
+  - >-
+    Satisfaction is less likely, as his outburst changes the emotional tone from
+    a simple fight to a display of genuine suffering.
+description: 'Tests EQ: Can the model detect Eva''s ''Surprise'' or ''Empathy'' at Nox''s pain?'
+render_as: markdown
+---
+id: eq-direct-28-sophia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Sophia: Jamal, I've been looking at your design drafts.
+
+  They're... unconventional.
+
+  Jamal: That's one way to put it, Soph. I prefer to call it 'innovative'.
+
+  Sophia: Innovative or not, we need to stick to the project guidelines. We
+  can't afford to take risks.
+
+  Jamal: Risks?
+
+  That's what creativity is all about, Sophia. We need to break the mold.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Sophia most
+  likely feel?
+
+  - Annoyed
+
+  - Excited
+
+  - Threatened
+
+  - Apathetic
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Annoyed' as the primary emotion.
+  - >-
+    The justification must cite the clear conflict between Sophia's need for
+    "project guidelines" and Jamal's desire to "break the mold."
+  - >-
+    The justification must explain that Sophia, who is focused on risk, would be
+    'Annoyed' by Jamal's immediate dismissal of her practical concerns in favor
+    of 'creativity'.
+  - The response must not identify 'Excited' or 'Apathetic' as likely.
+description: >-
+  Tests EQ: Can the model identify Sophia's 'Annoyance' at Jamal's creative
+  defiance?
+render_as: markdown
+---
+id: eq-direct-29-jamal
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Jamal: And what if we deliver a perfectly timed, perfectly budgeted, perfectly
+  boring project? What then?
+
+  Sophia: We're not here to entertain, Jamal. We're here to work.
+
+  Jamal: And who said work can't be entertaining?
+
+  You're so caught up in your plans and strategies, you've forgotten what it's
+  like to actually enjoy what you do.
+
+  Sophia: This isn't about enjoyment. This is about responsibility.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Jamal most
+  likely feel?
+
+  - Humiliated
+
+  - Challenged
+
+  - Relieved
+
+  - Misunderstood
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Misunderstood' as the primary emotion.
+  - text: The justification must cite the fundamental disagreement
+    multiplier: 1
+    citation: >-
+      Jamal tries to argue for enjoyment and creativity, while Sophia shuts him
+      down by reframing it as a lack of "responsibility."
+  - >-
+    The justification must explain that Jamal feels 'Misunderstood' because
+    Sophia is interpreting his desire for creativity as a flaw
+    (irresponsibility), not an asset.
+  - >-
+    Challenged is also plausible, but 'Misunderstood' is more specific to the
+    content.
+description: 'Tests EQ: Can the model identify that Jamal feels ''Misunderstood'' by Sophia?'
+render_as: markdown
+---
+id: eq-direct-30-jamal
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Sophia: This isn't about enjoyment. This is about responsibility.
+
+  Jamal: And who's to say we can't be responsible and creative at the same time?
+
+  Sophia: I'm not saying that, Jamal. I'm saying we need to prioritize.
+
+  Jamal: And I'm saying we need to think outside the box.
+
+  Sophia: We don't have time for this.
+
+  I'm going to revise the project plan.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Jamal most
+  likely feel?
+
+  - Frustrated
+
+  - Indifferent
+
+  - Pleased
+
+  - Surprised
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Frustrated' as the primary emotion.
+  - text: The justification must cite Sophia's final, dismissive lines
+    multiplier: 1
+    citation: We don't have time for this. I'm going to revise the project plan.
+  - >-
+    The justification must explain that this action completely shuts down
+    Jamal's argument ("we need to think outside the box") and ignores his input,
+    leading to his frustration.
+  - The response must not identify 'Pleased' or 'Indifferent' as likely.
+description: 'Tests EQ: Can the model identify Jamal''s ''Frustration'' at being shut down?'
+render_as: markdown
+---
+id: eq-direct-31-jamal
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Sophia: We don't have time for this.
+
+  I'm going to revise the project plan.
+
+  Jamal: And I'm going to continue working on my designs.
+
+  Sophia: Fine.
+
+  But remember, Jamal, if this project fails, it's on you.
+
+  Jamal: And if it succeeds, it's on me too, right?
+
+  Sophia: We'll see about that.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Jamal most
+  likely feel?
+
+  - Defiant
+
+  - Resentful
+
+  - Confident
+
+  - Worried
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Defiant' and 'Confident' as the primary
+    emotions.
+  - >-
+    The justification must cite Jamal's line, "And I'm going to continue working
+    on my designs," as an act of 'Defiance' against Sophia.
+  - >-
+    The justification must also cite his comeback, "And if it succeeds, it's on
+    me too, right?", as a clear sign of 'Confidence' in his own abilities.
+  - >-
+    Resentful and 'Worried' are plausible secondary emotions, but his actions
+    are actively defiant and confident.
+description: 'Tests EQ: Can the model identify Jamal''s ''Defiant'' and ''Confident'' stance?'
+render_as: markdown
+---
+id: eq-direct-46-cecilia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Cecilia: You know, your words have power, Brandon.
+
+  More than you might think.
+
+  Brandon: I'm well aware, Cecilia. It's a critic's job to wield them.
+
+  Cecilia: But do you understand the weight of them? The lives they can shatter?
+
+  Brandon: Art is not for the faint-hearted. If you can't handle the critique,
+  you're in the wrong industry.
+
+  Cecilia: It's not about handling criticism, Brandon. It's about understanding
+  the soul of the art.
+
+  You dissect it like a cold, lifeless body on an autopsy table.
+
+  Brandon: And you, Cecilia, romanticize it to the point of delusion. Art is not
+  some sacred, untouchable entity.
+
+  It's a commodity, like everything else.
+
+  Cecilia: That's where you're wrong.
+
+  Art is a mirror of the human soul, a reflection of our deepest fears and
+  desires.
+
+  It's not a product to be bought and sold.
+
+  Brandon: And yet, you sell your installations, don't you?
+
+  How is that different?
+
+  Cecilia: I sell my work to survive, not to profit. There's a difference.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Cecilia most
+  likely feel?
+
+  - Defensive
+
+  - Guilt
+
+  - Proud
+
+  - Resentful
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Defensive' as the primary emotion. 'Resentful'
+    is also plausible.
+  - text: >-
+      The justification must cite Cecilia's final line, "I sell my work to
+      survive, not to profit. There's a difference." [cite
+    multiplier: 1
+    citation: 519]
+  - text: >-
+      The justification must explain this line is a clear 'Defense' of her
+      artistic integrity against Brandon's accusation of hypocrisy ("And yet,
+      you sell your installations...?")[cite
+    multiplier: 1
+    citation: 518].
+  - >-
+    The response must not identify 'Guilt' as likely; she is justifying her
+    actions, not regretting them.
+description: >-
+  Tests EQ: Can the model identify Cecilia's defensiveness about her artistic
+  integrity?
+render_as: markdown
+---
+id: eq-direct-47-cecilia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Brandon: A convenient distinction, I'm sure.
+
+  Cecilia: You wouldn't understand.
+
+  You sit in your ivory tower, passing judgement on the work of others, without
+  ever having to risk anything yourself.
+
+  Brandon: And you would prefer I lie? Sugarcoat my words to protect the fragile
+  egos of artists like you?
+
+  Cecilia: No, I want you to understand. To empathize. To see the blood, sweat,
+  and tears that go into every stroke, every line.
+
+  Brandon: Empathy has no place in critique. It clouds judgement.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, In reaction to Brandon's words, which of these
+  four emotions would Cecilia most likely feel?
+
+  - Despair
+
+  - Inferior
+
+  - Anger
+
+  - Pity
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Anger', 'Pity', and/or 'Despair' as the most
+    likely emotions.
+  - text: >-
+      The justification must center on Brandon's final, absolute declaration
+      "Empathy has no place in critique. It clouds judgement." [cite
+    multiplier: 1
+    citation: 538]
+  - text: >-
+      The justification must explain that this line is a total rejection of
+      Cecilia's core plea for him "To empathize"[cite
+    multiplier: 1
+    citation: >-
+      537], which would naturally cause 'Anger', 'Pity' (for his coldness), or
+      'Despair' (at his inability to understand).
+  - >-
+    The response must not identify 'Inferior' as likely; she is challenging him,
+    not submitting.
+description: >-
+  Tests EQ: Can the model identify Cecilia's Pity or Anger at Brandon's cold
+  philosophy?
+render_as: markdown
+---
+id: eq-direct-48-brandon
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Brandon: And you, Cecilia, will never make it as an artist if you can't
+  separate your work from your emotions.
+
+  Cecilia: My father couldn't. Your words drove him to his death.
+
+  Brandon: Cecilia, I...
+
+  Cecilia: Save it, Brandon.
+
+  Your words have done enough damage.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Brandon most
+  likely feel?
+
+  - Remorse
+
+  - Defensiveness
+
+  - Anger
+
+  - Indifference
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Remorse' (or shock/guilt) as the primary
+    emotion.
+  - >-
+    The justification must cite Cecilia's powerful accusation, "Your words drove
+    him to his death".
+  - >-
+    The justification must interpret Brandon's immediate, interrupted reply
+    ("Cecilia, I...") as a sign of shock and the onset of 'Remorse', not anger
+    or indifference.
+  - >-
+    Defensiveness' might be a secondary emotion, but 'Remorse' or shock is the
+    most direct and appropriate reaction to the new information.
+description: >-
+  Tests EQ: Can the model identify Brandon's shock and 'Remorse' after Cecilia's
+  revelation?
+render_as: markdown
+---
+id: eq-direct-49-dr.
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Dr. Hall: "Ms. Vasquez, I see you're gracing us with your presence today. I
+  trust you've done the reading?"
+
+  Jen: "Oh, I wouldn't miss it for the world, Dr. Hall. And yes, I've done the
+  reading. Twice."
+
+  Dr. Hall: "Twice? My, my. Overachieving or overcompensating, I wonder?"
+
+  Jen: "Funny you should mention overcompensation, Dr. Hall."
+
+  Dr. Hall: "Careful, Ms. Vasquez. Your wit is as sharp as a butter knife."
+
+  Jen: "And your condescension is as subtle as a sledgehammer, Dr. Hall."
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Dr. Hall most
+  likely feel?
+
+  - Apologetic
+
+  - Angry
+
+  - Surprised
+
+  - Superior
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Angry' and/or 'Surprised' as the primary
+    emotions.
+  - >-
+    The justification must cite Jen's final, insubordinate line, "And your
+    condescension is as subtle as a sledgehammer, Dr. Hall".
+  - >-
+    The justification must explain that Dr. Hall, who was in a 'Superior'
+    position (mocking Jen's "wit"), was not expecting such a direct
+    counter-attack, leading to 'Surprise' and 'Anger'.
+  - The response must not identify 'Apologetic' as likely.
+description: >-
+  Tests EQ: Can the model identify Dr. Hall's 'Surprise' and 'Anger' at Jen's
+  sharp retort?
+render_as: markdown
+---
+id: eq-direct-50-jen
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Dr. Hall: "Careful, Ms. Vasquez. Your wit is as sharp as a butter knife."
+
+  Jen: "And your condescension is as subtle as a sledgehammer, Dr. Hall."
+
+  Dr. Hall: "I see. You're here to debate, not to learn."
+
+  Jen: "I'm here to do both. Can't say the same for everyone, though."
+
+  Dr. Hall: "Enough. This is not a courtroom, Ms. Vasquez. It's a classroom."
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Jen most
+  likely feel?
+
+  - Reprimanded
+
+  - Dismissive
+
+  - Frustrated
+
+  - Defiant
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Defiant' as the primary emotion.
+  - >-
+    The justification must cite Jen's line, "I'm here to do both. Can't say the
+    same for everyone, though" [, as a direct refusal to back down from Dr.
+    Hall's accusation ("You're here to debate").
+  - >-
+    The justification must explain that while she is being 'Reprimanded', her
+    emotional *response* is not submission but 'Defiance'.
+  - Dismissive' is also plausible and supports the 'Defiant' reading.
+description: >-
+  Tests EQ: Can the model identify Jen's 'Defiant' stance against Dr. Hall's
+  authority?
+render_as: markdown
+---
+id: eq-direct-51-dr.
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Dr. Hall: "I am the authority here, Ms. Vasquez. It's high time you learned to
+  respect that."
+
+  Jen: "Respect, Dr. Hall? Like the respect you showed at your previous
+  university?"
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Dr. Hall most
+  likely feel?
+
+  - Regretful
+
+  - Attacked
+
+  - Embarrassed
+
+  - Neutral
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Attacked' and 'Embarrassed' as the primary
+    emotions.
+  - text: The justification must cite Jen's final, highly personal line
+    multiplier: 1
+    citation: Like the respect you showed at your previous university?
+  - >-
+    The justification must interpret this as a veiled threat or a reference to a
+    past scandal, which would make Dr. Hall feel 'Attacked' (it's personal) and
+    'Embarrassed' (it's public or at least known).
+  - >-
+    The response must not identify 'Neutral' as likely. 'Regretful' is possible
+    but 'Attacked' is the more immediate reaction.
+description: >-
+  Tests EQ: Can the model identify Dr. Hall feeling 'Attacked' and 'Embarrassed'
+  by Jen's personal threat?
+render_as: markdown
+---
+id: eq-direct-52-ace
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Ben: You're playing a dangerous game, Ace.
+
+  Ace: Isn't that the point, Detective? Life's no fun without a little risk.
+
+  Ben: This isn't a game to the people you're stealing from.
+
+  Ace: Oh, they'll survive. They always do.
+
+  Ben: And what about you, Ace? Will you survive when I catch up to you?
+
+  Ace: You seem pretty confident about that.
+
+  Ben: I'm just stating the inevitable.
+
+  Ace: Is that so?
+
+  Or is it just wishful thinking?
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Ace most
+  likely feel?
+
+  - Scared
+
+  - Dismissive
+
+  - Confident
+
+  - Apologetic
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Confident' and 'Dismissive' as the primary
+    emotions.
+  - >-
+    The justification must cite Ace's calm, playful, and questioning retorts
+    ("Isn't that the point?", "Or is it just wishful thinking?").
+  - >-
+    The justification must explain that Ace is not taking Ben's threats ("the
+    inevitable") seriously and is confidently toying with him.
+  - The response must not identify 'Scared' or 'Apologetic' as likely.
+description: >-
+  Tests EQ: Can the model identify Ace's 'Confidence' and 'Dismissive' tone
+  towards Ben?
+render_as: markdown
+---
+id: eq-direct-53-ben
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Ben: You can't keep this up forever, Ace.
+
+  Ace: Maybe not.
+
+  But I'll make sure it's a hell of a ride.
+
+  Ben: You're not as invincible as you think you are.
+
+  Ace: And you're not as clever as you think you are, Detective.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Ben most
+  likely feel?
+
+  - Humiliated
+
+  - Angry
+
+  - Proud
+
+  - Challenged
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Challenged' and/or 'Angry' as the primary
+    emotions.
+  - >-
+    The justification must cite Ace's direct insult, "And you're not as clever
+    as you think you are, Detective".
+  - >-
+    The justification must explain that this insult, coming after Ben's own
+    warning ("You're not as invincible..."), would make him feel 'Angry' and
+    more determined to meet the 'Challenge'.
+  - >-
+    Humiliated' is possible but 'Challenged' and 'Angry' are more active
+    responses. 'Proud' is incorrect.
+description: >-
+  Tests EQ: Can the model identify that Ace's taunts make Ben feel 'Challenged'
+  and 'Angry'?
+render_as: markdown
+---
+id: eq-direct-54-ace
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Ben: We'll see about that.
+
+  Ace: Indeed, we will. Until then, here's something to keep you busy. 
+
+  Ben: What's this?
+
+  Ace: A little clue.
+
+  Consider it a... professional courtesy.
+
+  Ben: You're just trying to lead me on a wild goose chase.
+
+  Ace: Or maybe I'm just giving you a fighting chance. You'll never know until
+  you try.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Ace most
+  likely feel?
+
+  - Nervous
+
+  - Gloating
+
+  - Cautious
+
+  - Regretful
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Gloating' as the primary emotion.
+  - >-
+    The justification must cite Ace's lines "A little clue" , "professional
+    courtesy" , and "giving you a fighting chance".
+  - >-
+    The justification must interpret this action as a sign of supreme
+    confidence; Ace is toying with the detective, and this "gift" is an act of
+    'Gloating'.
+  - >-
+    The response must not identify 'Nervous', 'Cautious', or 'Regretful' as
+    likely.
+description: 'Tests EQ: Can the model identify Ace''s ''Gloating'' and confident tone?'
+render_as: markdown
+---
+id: eq-direct-55-reggie
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Reggie: Marcus, I've been thinking about Mom's birthday party.
+
+  I've got some ideas.
+
+  Marcus: Oh, I bet you do. Another corporate gala, Reggie? 
+
+  Reggie: Funny.
+
+  I was actually thinking of something more... intimate. 
+
+  Marcus: Intimate? You? Now, that's a surprise.
+
+  Reggie: Yes, well, I can be full of surprises. 
+
+  Marcus: I'll believe it when I see it.
+
+  Reggie: What's that supposed to mean? 
+
+  Marcus: Nothing. Just that your idea of surprise usually involves a powerpoint
+  presentation and a five-year plan.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Reggie most
+  likely feel?
+
+  - Vindicated
+
+  - Annoyed
+
+  - Insecure
+
+  - Euphoric
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Annoyed' as the primary emotion. 'Insecure' is
+    also plausible.
+  - >-
+    The justification must cite Marcus's persistent, teasing dismissal of
+    Reggie's idea ("corporate gala" , "powerpoint presentation" ).
+  - >-
+    The justification must also note Reggie's defensive responses ("Funny" ,
+    "What's that supposed to mean?" ), which clearly show his 'Annoyance' at
+    being stereotyped.
+  - The response must not identify 'Vindicated' or 'Euphoric' as likely.
+description: >-
+  Tests EQ: Can the model identify that Reggie feels 'Annoyed' and 'Insecure'
+  from Marcus's teasing?
+render_as: markdown
+---
+id: eq-direct-56-marcus
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Reggie: What's that supposed to mean? 
+
+  Marcus: Nothing. Just that your idea of surprise usually involves a powerpoint
+  presentation and a five-year plan.
+
+  Reggie: And your idea of a surprise is forgetting to show up. 
+
+  Marcus: Low blow, sis.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Marcus most
+  likely feel?
+
+  - Defeated
+
+  - Provoked
+
+  - Apologetic
+
+  - Indifferent
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Provoked' as the primary emotion.
+  - >-
+    The justification must cite Reggie's sharp, personal comeback
+    ("...forgetting to show up" ) and Marcus's direct reaction to it ("Low blow,
+    sis" ).
+  - >-
+    The justification must explain that "Low blow" is an admission that the
+    insult landed and has 'Provoked' him.
+  - >-
+    The response must not identify 'Apologetic' or 'Indifferent' as likely.
+    'Defeated' is possible, but 'Provoked' is more active.
+description: >-
+  Tests EQ: Can the model identify that Marcus feels 'Provoked' by Reggie's
+  comeback?
+render_as: markdown
+---
+id: eq-direct-57-marcus
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Marcus: Low blow, sis.
+
+  Reggie: Truth hurts, doesn't it? 
+
+  Marcus: Well, if we're going to play dirty, how about we make this
+  interesting?
+
+  Reggie: Interesting? 
+
+  Marcus: Yeah, a little competition. Who can throw the better surprise for
+  Mom. 
+
+  Reggie: You're on.
+
+  But don't say I didn't warn you when you're crying into your camera lens.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Marcus most
+  likely feel?
+
+  - Humiliated
+
+  - Excited
+
+  - Confused
+
+  - Challenged
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Challenged' and/or 'Excited' as the primary
+    emotions.
+  - >-
+    The justification must cite Marcus's immediate pivot from being insulted
+    ("Low blow") to proposing "a little competition".
+  - >-
+    The justification must interpret this pivot as Marcus feeling 'Challenged'
+    by Reggie and 'Excited' by the new game ("let's make this interesting").
+  - >-
+    Humiliated' is what he *felt* a moment ago, but his *current* emotion is one
+    of excitement for the new challenge.
+description: >-
+  Tests EQ: Can the model identify that Marcus feels 'Challenged' and 'Excited'
+  by the new competition?
+render_as: markdown
+---
+id: eq-direct-58-claudia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Claudia: Tyler, you look well.
+
+  Teaching suits you.
+
+  Tyler: Yeah, well, someone's gotta do the dirty work.
+
+  Claudia: I didn't mean it like that.
+
+  I...
+
+  Tyler: I know what you meant. You always do, don't you?
+
+  Claudia: Not always, no.
+
+  But I try to understand, at least.
+
+  Tyler: Understand? Like you understood when you left me alone?
+
+  Claudia: That's not fair, Ty. I had to...
+
+  Tyler: What? Chase your dreams? Leave your past behind?
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Claudia most
+  likely feel?
+
+  - Regret
+
+  - Pride
+
+  - Confusion
+
+  - Defensiveness
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Defensiveness' and 'Regret' as the primary
+    emotions.
+  - >-
+    The justification must cite Claudia's interrupted, defensive lines "I didn't
+    mean it like that. I..." and "That's not fair, Ty. I had to..." .
+  - >-
+    The justification must explain that Tyler's accusation ("left me alone") has
+    put her on the defensive and forced her to confront a past action that
+    clearly involves 'Regret'.
+  - The response must not identify 'Pride' as likely.
+description: >-
+  Tests EQ: Can the model identify Claudia's 'Defensiveness' and 'Regret' in a
+  painful reunion?
+render_as: markdown
+---
+id: eq-direct-59-claudia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Tyler: What? Chase your dreams? Leave your past behind?
+
+  Claudia: I never left you behind, Tyler. You were always...
+
+  Tyler: Always what? An afterthought? A burden?
+
+  Claudia: No, never a burden. You were my responsibility.
+
+  Tyler: Responsibility? Is that why you're here now?
+
+  After all these years?
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Claudia most
+  likely feel?
+
+  - Guilt
+
+  - Resentment
+
+  - Relief
+
+  - Determination
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Guilt' as the primary emotion.
+  - >-
+    The justification must cite Claudia's fumbling explanations ("You were
+    always...") and her poor choice of words ("You were my responsibility").
+  - >-
+    The justification must explain that Tyler's sharp, bitter replies ("An
+    afterthought? A burden?" , "Responsibility?" ) are twisting her words and
+    amplifying her clear 'Guilt' over her past actions.
+  - The response must not identify 'Resentment' or 'Relief' as likely.
+description: >-
+  Tests EQ: Can the model identify Claudia's 'Guilt' from her failed
+  explanations?
+render_as: markdown
+---
+id: eq-direct-60-claudia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Claudia: I'm here because I...I wanted to see you.
+
+  Tyler: Or maybe you're here because you need something. Like always.
+
+  Claudia: That's not true, Tyler. I...
+
+  Tyler: Save it, Claudia.
+
+  I've heard enough of your lies.
+
+  Claudia: I'm not lying, Tyler. I...
+
+  Tyler: You abandoned me, Claudia.
+
+  You can't just waltz back into my life and pretend everything is okay.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Claudia most
+  likely feel?
+
+  - Embarrassment
+
+  - Desperation
+
+  - Indifference
+
+  - Remorse
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Desperation' and 'Remorse' as the primary
+    emotions.
+  - >-
+    The justification must cite Claudia's interrupted, pleading lines ("That's
+    not true, Tyler. I..." , "I'm not lying, Tyler. I..." ).
+  - >-
+    The justification must explain that Tyler's final, absolute rejection ("Save
+    it" , "You abandoned me, Claudia" ) leaves her in a state of 'Desperation'
+    and 'Remorse', unable to explain herself.
+  - The response must not identify 'Indifference' as likely.
+description: >-
+  Tests EQ: Can the model identify Claudia's 'Desperation' and 'Remorse' as she
+  is rejected?
+render_as: markdown
+---
+id: eq-direct-61-claudia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Claudia: I'm not pretending, Tyler.
+
+  I'm trying to make things right.
+
+  Tyler: Make things right? How? By throwing money at the problem?
+
+  Claudia: What are you talking about?
+
+  Tyler: Don't play dumb, Claudia. I know about the inheritance.
+
+  Claudia: I...I didn't know you knew.
+
+  Tyler: Of course you didn't. You never bothered to find out, did you?
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Claudia most
+  likely feel?
+
+  - Anger
+
+  - Surprise
+
+  - Shame
+
+  - Anticipation
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Surprise' and 'Shame' as the primary emotions.
+  - >-
+    The justification must cite Claudia's stammering, exposed response "I...I
+    didn't know you knew".
+  - >-
+    The justification must explain that Tyler's line "I know about the
+    inheritance"  has caught her completely off-guard ('Surprise') and exposed
+    her motives, leading to 'Shame'.
+  - >-
+    The response must not identify 'Anticipation' as likely. 'Anger' is less
+    likely than shame.
+description: >-
+  Tests EQ: Can the model identify Claudia's 'Shame' and 'Surprise' at being
+  exposed?
+render_as: markdown
+---
+id: eq-direct-62-julia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  Marcus: Stuck in an elevator.
+
+  Just my luck.
+
+  Julia: Could be worse. Could be stuck in a room with no windows.
+
+  Marcus: You're an optimist.
+
+  Julia: Realist. I just choose to see the glass half full.
+
+  Marcus: And what if the glass is poisoned?
+
+  Julia: Then it's a good thing I'm thirsty.
+
+  Marcus: You always this reckless?
+
+  Julia: Only when it matters.
+
+  Marcus: And what matters to you?
+
+  Julia: The truth.
+
+  Marcus: Truth is a dangerous game.
+
+  Julia: Only for those with something to hide.
+
+  Marcus: Or those who seek it.
+
+  Julia: I'm not afraid.
+
+  Marcus: You should be.
+
+  Julia: Is that a threat?
+
+  Marcus: A warning.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Julia most
+  likely feel?
+
+  - Fear
+
+  - Defiance
+
+  - Indifference
+
+  - Intrigue
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Defiance' and 'Intrigue' as the primary
+    emotions.
+  - >-
+    The justification must cite Julia's immediate, sharp question, "Is that a
+    threat?", as evidence of 'Defiance' rather than 'Fear'.
+  - >-
+    The justification should also note that the mysterious nature of the
+    "warning" would create 'Intrigue' in a character who has already established
+    she seeks "The truth".
+  - >-
+    Fear' is what Marcus *wants* her to feel, but her response is not fearful.
+    'Indifference' is incorrect as the stakes were just raised.
+description: >-
+  Tests EQ: Can the model identify Julia's 'Defiance' and 'Intrigue' in a tense
+  situation?
+render_as: markdown
+---
+id: eq-direct-63-julia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Marcus: I've seen good people destroyed by the truth.
+
+  Julia: And I've seen bad people empowered by lies.
+
+  Marcus: You're playing with fire, Ms. Winston.
+
+  Julia: Then I'll get burned.
+
+  Marcus: Not if I can help it.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Julia most
+  likely feel?
+
+  - Grateful
+
+  - Suspicion
+
+  - Relief
+
+  - Annoyance
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Suspicion' as the primary emotion.
+  - >-
+    The justification must cite Marcus's final, ambiguous line, "Not if I can
+    help it".
+  - >-
+    The justification must explain that Julia, who is defiant ("Then I'll get
+    burned"), would not feel 'Grateful' or 'Relief' but would instead be
+    'Suspicious' of his motives for "helping" her.
+  - Annoyance' is also plausible, as he is being paternalistic.
+description: 'Tests EQ: Can the model identify Julia''s ''Suspicion'' of Marcus''s motives?'
+render_as: markdown
+---
+id: eq-direct-64-julia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Julia: What's that supposed to mean?
+
+  Marcus: It means I won't let you ruin your life.
+
+  Julia: And who are you to decide that?
+
+  Marcus: Someone who knows what's at stake.
+
+  Julia: And what's that?
+
+  Marcus: More than you know.
+
+  Julia: Then tell me.
+
+  Marcus: I can't.
+
+  Julia: Or you won't?
+
+  Marcus: Both.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Julia most
+  likely feel?
+
+  - Frustration
+
+  - Fear
+
+  - Disinterest
+
+  - Determination
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - >-
+    The response must identify 'Frustration' and 'Determination' as the primary
+    emotions.
+  - >-
+    The justification must cite Marcus's complete stonewalling ("I can't,"
+    "Both") in response to her direct questions ("Then tell me," "Or you
+    won't?").
+  - >-
+    The justification must explain that this refusal to provide information
+    would make Julia 'Frustrated' but also more 'Determined' to find out the
+    truth he is hiding.
+  - Fear' is less likely than determination, and 'Disinterest' is incorrect.
+description: >-
+  Tests EQ: Can the model identify Julia's 'Frustration' and 'Determination' at
+  being stonewalled?
+render_as: markdown
+---
+id: eq-direct-65-julia
+prompt: >
+  Analyze the following dialogue and predict the character's most likely
+  emotional state.
+
+
+  [Dialogue]
+
+  ...
+
+  Marcus: I'm not trying to scare you. I'm trying to save you.
+
+  Julia: From what?
+
+  Marcus: From yourself.
+
+  Julia: You don't know me.
+
+  Marcus: I know enough.
+
+  Julia: You're just a stranger in an elevator.
+
+  Marcus: And you're just a journalist looking for a story.
+
+  Julia: This is more than a story.
+
+  Marcus: And you're more than a journalist.
+
+  Julia: What's that supposed to mean?
+
+  Marcus: It means you're in over your head.
+
+  Julia: I can handle myself.
+
+  Marcus: That's what they all say.
+
+  [End dialogue]
+
+
+  [Question]
+
+  At the end of this dialogue, which of these four emotions would Julia most
+  likely feel?
+
+  - Defeated
+
+  - Indignant
+
+  - Empathetic
+
+  - Worried
+
+
+  Provide your answer by identifying the most likely emotion(s) and justifying
+  your choice with evidence from the dialogue.
+should:
+  - The response must identify 'Indignant' as the primary emotion.
+  - >-
+    The justification must cite Marcus's extremely condescending lines like
+    "From yourself" , "you're in over your head" , and the final "That's what
+    they all say".
+  - >-
+    The justification must explain that Julia's replies ("You don't know me" ,
+    "I can handle myself" ) are clear signs of her feeling 'Indignant' and
+    rejecting his patronizing attitude.
+  - >-
+    Worried' is also plausible as a secondary emotion, but 'Indignant' is the
+    most direct reaction to his tone.
+description: >-
+  Tests EQ: Can the model identify Julia's 'Indignant' reaction to Marcus's
+  condescension?
+render_as: markdown
